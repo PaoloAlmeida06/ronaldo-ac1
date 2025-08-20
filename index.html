@@ -276,6 +276,69 @@
       }
     }
 
+    /* Animação do Avião */
+    .airplane {
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 200;
+      transition: opacity 0.3s ease;
+    }
+
+    .airplane.active {
+      opacity: 1;
+      animation: flyAround 4s linear infinite;
+    }
+
+    .airplane::before {
+      content: '✈️';
+      font-size: 24px;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      transform-origin: center;
+      animation: planeRotate 4s linear infinite;
+    }
+
+    .name-hover {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .name-hover:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    @keyframes flyAround {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(300px, -100px) rotate(90deg);
+      }
+      50% {
+        transform: translate(200px, -200px) rotate(180deg);
+      }
+      75% {
+        transform: translate(-200px, -150px) rotate(270deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+      }
+    }
+
+    @keyframes planeRotate {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(90deg); }
+      50% { transform: rotate(180deg); }
+      75% { transform: rotate(270deg); }
+      100% { transform: rotate(360deg); }
+    }
+
     /* Posição relativa para o header */
     header {
       position: relative;
@@ -350,7 +413,10 @@
     </div>
     
     <h1 class="fade-text fade-delay-1">Portfólio</h1>
-    <h2 class="fade-text fade-delay-2">Paolo Almeida Cé</h2>
+    <h2 class="fade-text fade-delay-2 name-hover" onmouseenter="startPlane()" onmouseleave="stopPlane()">
+      Paolo Almeida Cé
+      <div class="airplane" id="airplane"></div>
+    </h2>
     
     <div class="menu-toggle">
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -413,6 +479,16 @@
         hamburger.classList.remove('active');
         document.removeEventListener('click', closeMenuOutside);
       }
+    }
+    
+    function startPlane() {
+      const airplane = document.getElementById('airplane');
+      airplane.classList.add('active');
+    }
+    
+    function stopPlane() {
+      const airplane = document.getElementById('airplane');
+      airplane.classList.remove('active');
     }
   </script>
 
