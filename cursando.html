@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursando — Ibmec</title>
+  <meta name="description" content="Resumo do curso de Ciência de Dados e IA no Ibmec." />
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --card: #0b1224cc;    /* translucent */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #cbd5e1;     /* slate-300 */
+      --accent: #60a5fa;    /* blue-400 */
+      --ring: #3b82f6;      /* blue-500 */
+      --radius: 20px;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+        Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji",
+        "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 10%, #0b1224, var(--bg));
+      color: var(--text);
+    }
+    .wrapper {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(900px, 100%);
+      background: linear-gradient(180deg, var(--card), rgba(11,18,36,.85));
+      border: 1px solid rgba(148,163,184,.2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 40px);
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      margin: 0 0 16px 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(96,165,250,.15);
+      color: var(--muted);
+      font-size: 14px;
+      border: 1px solid rgba(96,165,250,.35);
+    }
+    p {
+      margin: 16px 0 0 0;
+      font-size: clamp(16px, 2.2vw, 20px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      opacity: .9;
+    }
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:focus, .footer a:hover { text-decoration: underline; }
+    /* Focus styles for accessibility */
+    :focus { outline: 3px solid var(--ring); outline-offset: 2px; }
+    .nav-button {
+      margin-top: 24px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: rgba(96,165,250,.2);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 12px;
+      border: 1px solid rgba(96,165,250,.4);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .nav-button:hover {
+      background: rgba(96,165,250,.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <article class="card" role="article" aria-labelledby="titulo-cursando">
+      <div class="badge" aria-hidden="true" title="Seção do site">
+        <!-- Simple decorative dot -->
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+          <circle cx="5" cy="5" r="5" />
+        </svg>
+        Cursando
+      </div>
+      <h1 id="titulo-cursando">Cursando</h1>
+      <p>
+        Atualmente, estou no segundo semestre do curso de Ciência de Dados e Inteligência Artificial no Ibmec. Ao longo dessa jornada acadêmica, tenho desenvolvido habilidades sólidas em programação, análise estatística e visualização de dados, além de explorar técnicas avançadas de machine learning e inteligência artificial. Meu foco é aplicar esses conhecimentos para resolver problemas reais e criar soluções inovadoras, combinando teoria, prática e pensamento crítico.
+      </p>
+      <div class="footer" aria-hidden="true">Seção informativa — Ibmec • Ciência de Dados e IA</div>
+      
+      <a href="index.html" class="nav-button">← Voltar ao Portfólio</a>
+    </article>
+  </main>
+</body>
+</html>

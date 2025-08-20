@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiência Profissional</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #0b1224cc;
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #34d399;
+      --radius: 20px;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+      background: radial-gradient(1000px 700px at 20% 10%, #0b1224, var(--bg));
+      color: var(--text);
+    }
+    .wrapper {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(800px, 100%);
+      background: linear-gradient(180deg, var(--card), rgba(11,18,36,.85));
+      border: 1px solid rgba(148,163,184,.2);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 40px);
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      margin: 0 0 16px 0;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(52,211,153,.15);
+      color: var(--muted);
+      font-size: 14px;
+      border: 1px solid rgba(52,211,153,.35);
+    }
+    p {
+      margin: 16px 0 0 0;
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .nav-button {
+      margin-top: 24px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: rgba(52,211,153,.2);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 12px;
+      border: 1px solid rgba(52,211,153,.4);
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .nav-button:hover {
+      background: rgba(52,211,153,.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <article class="card" role="article" aria-labelledby="titulo-exp">
+      <div class="badge" aria-hidden="true">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true">
+          <circle cx="5" cy="5" r="5" />
+        </svg>
+        Experiência Profissional
+      </div>
+      <h1 id="titulo-exp">Experiência Profissional</h1>
+      <p>
+        Atualmente estou em busca da minha primeira experiência profissional.
+      </p>
+      
+      <a href="index.html" class="nav-button">← Voltar ao Portfólio</a>
+    </article>
+  </main>
+</body>
+</html>
